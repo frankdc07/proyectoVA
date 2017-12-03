@@ -3,7 +3,7 @@ var margin = {
 	top: 20,
 	right: 20,
 	bottom: 30,
-	left: 150
+	left: 75
 },
 width = (1140 * 0.6) - margin.left - margin.right,
 height = 960 - margin.top - margin.bottom;
@@ -76,12 +76,14 @@ function createStackedChart(data) {
 
 	svgSB.append("g")
 	.attr("class", "y axis")
-	.call(yAxis)
+	.call(yAxis)    
 	.append("text")
 	.attr("transform", "rotate(-90)")
 	.attr("y", 6)
 	.attr("dy", ".71em")
-	.style("text-anchor", "end");
+	.style("text-anchor", "end")
+    .selectAll("text")
+      .call(wrap, y.rangeBand());;
 	//.text("Population");
 
 	var dpto = svgSB.selectAll(".dpto")
@@ -141,8 +143,9 @@ function createStackedChart(data) {
         if (active_link === "0" || d.name === legendClicked){
           div.transition()		
                 .duration(200)		
-                .style("opacity", .9);		
-          div.html("<b>" + d.name + "</b></br>" + formatComma(delta) + " Hectáreas")	
+                .style("opacity", .9);
+        var icon ='"ion-leaf"'
+          div.html("<i class=" + icon + " ></i><b> " + d.name + "</b></br>" + formatComma(delta) + " Hectáreas")	
                 .style("left", (d3version3.event.pageX + 15 ) + "px")		
                 .style("top", (d3version3.event.pageY - 45) + "px");
         }
@@ -163,7 +166,9 @@ function createStackedChart(data) {
 		              return color(d.name);
                 }
             });
-	})
+	});
+    
+    
 
 	var legend = svgSB.selectAll(".legend")
 		.data(color.domain().slice().reverse())
@@ -176,13 +181,28 @@ function createStackedChart(data) {
 		.attr("transform", function (d, i) {
 			return "translate(0," + i * 20 + ")";
 		});
+    
+    var yearLabel = svgSB.selectAll(".yearlabel")
+		.data(color.domain().slice().reverse())
+        .enter().append("g")
+		.attr("class", "yearlabel")
+		.attr("transform", function (d, i) {console.log("hola");
+			return "translate(0," + i * 20 + ")";
+		});
+    
+    yearLabel.append("text")
+	.attr("x", width - 24)
+	.attr("y", height * .22)
+	.attr("dy", ".35em")
+	.style("text-anchor", "end")
+	.text(selectValue);
 
 	//reverse order to match order in which bars are stacked
 	legendClassArray = legendClassArray.reverse();
 
 	legend.append("rect")
-	.attr("x", width - 18)
-	.attr("y", 350)
+	.attr("x", width - 45)
+	.attr("y", 260)
 	.attr("width", 18)
 	.attr("height", 18)
 	.style("fill", color)
@@ -243,8 +263,8 @@ function createStackedChart(data) {
 	});
 
 	legend.append("text")
-	.attr("x", width - 24)
-	.attr("y", 359)
+	.attr("x", width - 55)
+	.attr("y", 269 )
 	.attr("dy", ".35em")
 	.style("text-anchor", "end")
 	.text(function (d) {

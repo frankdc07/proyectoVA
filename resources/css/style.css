@@ -33,11 +33,11 @@ h2,
 h3 {
     font-weight: 300;
     text-transform: uppercase;
+    margin-bottom: 25px;
 }
 
 h1 {
     margin-top: 0;
-    margin-bottom: 20px;
     color: #fff;
     font-size: 240%;    
     word-spacing: 2px;
@@ -106,6 +106,14 @@ header {
 }
 
 
+/* --------------------------------------------------*/
+/* sections */
+/* --------------------------------------------------*/
+
+.vis {
+    padding-top: 40px;
+}
+
 
 /*-------------------------------------------------------*/
 /* Stacked Bar Chart*/
@@ -123,6 +131,7 @@ div.tooltip {
     border-radius: 8px;			
     pointer-events: none;	
     padding-top: 15px;
+    text-decoration-color: "#921213"
 }
 
 .tooltip {
@@ -150,6 +159,11 @@ div.tooltip {
 
 .stackedbch{
     font-size: 12px;
+}
+
+.yearlabel {
+    font-size: 350%;
+    font-weight: 900;
 }
 
 
@@ -195,4 +209,15 @@ text.axis-worktime {
 
 .piechart {
     text-align: center;
+}
+
+.legend rect {
+    fill:white;
+    stroke:black;
+}
+
+
+.labdepto text{
+    color: "#164f07";
+    text-transform: capitalize;
 }

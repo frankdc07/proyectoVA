@@ -1,100 +1,100 @@
-Departamento,Tipo,valor
-AMAZONAS,Superficie con bosque natural,10622111
-AMAZONAS,Superficie sin bosque natural,292431
-AMAZONAS,Superficie sin información,2324
-ANTIOQUIA,Superficie con bosque natural,2185080
-ANTIOQUIA,Superficie sin bosque natural,3991202
-ANTIOQUIA,Superficie sin información,138978
-ARAUCA,Superficie con bosque natural,422270
-ARAUCA,Superficie sin bosque natural,1952185
-ARAUCA,Superficie sin información,11251
-ATLANTICO,Superficie con bosque natural,4674
-ATLANTICO,Superficie sin bosque natural,329183
-ATLANTICO,Superficie sin información,0
-BOGOTA DC,Superficie con bosque natural,9275
-BOGOTA DC,Superficie sin bosque natural,151976
-BOGOTA DC,Superficie sin información,1468
-BOLIVAR,Superficie con bosque natural,647687
-BOLIVAR,Superficie sin bosque natural,2015010
-BOLIVAR,Superficie sin información,2682
-BOYACA,Superficie con bosque natural,507507
-BOYACA,Superficie sin bosque natural,2157270
-BOYACA,Superficie sin información,6312
-CALDAS,Superficie con bosque natural,146712
-CALDAS,Superficie sin bosque natural,589133
-CALDAS,Superficie sin información,5125
-CAQUETA,Superficie con bosque natural,6518634
-CAQUETA,Superficie sin bosque natural,2402438
-CAQUETA,Superficie sin información,82566
-CASANARE,Superficie con bosque natural,561770
-CASANARE,Superficie sin bosque natural,3896336
-CASANARE,Superficie sin información,386
-CAUCA,Superficie con bosque natural,1418668
-CAUCA,Superficie sin bosque natural,1523332
-CAUCA,Superficie sin información,115474
-CESAR,Superficie con bosque natural,196742
-CESAR,Superficie sin bosque natural,2036167
-CESAR,Superficie sin información,2796
-CHOCO,Superficie con bosque natural,3748607
-CHOCO,Superficie sin bosque natural,737859
-CHOCO,Superficie sin información,313287
-CORDOBA,Superficie con bosque natural,422845
-CORDOBA,Superficie sin bosque natural,2054380
-CORDOBA,Superficie sin información,24816
-CUNDINAMARCA,Superficie con bosque natural,309644
-CUNDINAMARCA,Superficie sin bosque natural,1872629
-CUNDINAMARCA,Superficie sin información,61524
-GUAINIA,Superficie con bosque natural,6631679
-GUAINIA,Superficie sin bosque natural,499143
-GUAINIA,Superficie sin información,16
-GUAVIARE,Superficie con bosque natural,4813224
-GUAVIARE,Superficie sin bosque natural,731965
-GUAVIARE,Superficie sin información,0
-HUILA,Superficie con bosque natural,466718
-HUILA,Superficie sin bosque natural,1266855
-HUILA,Superficie sin información,140796
-LA GUAJIRA,Superficie con bosque natural,176649
-LA GUAJIRA,Superficie sin bosque natural,1877386
-LA GUAJIRA,Superficie sin información,23
-MAGDALENA,Superficie con bosque natural,336483
-MAGDALENA,Superficie sin bosque natural,1984086
-MAGDALENA,Superficie sin información,3
-META,Superficie con bosque natural,3077470
-META,Superficie sin bosque natural,5374582
-META,Superficie sin información,96476
-NARIÑO,Superficie con bosque natural,1771894
-NARIÑO,Superficie sin bosque natural,1168758
-NARIÑO,Superficie sin información,195444
-NORTE DE SANTANDER,Superficie con bosque natural,928382
-NORTE DE SANTANDER,Superficie sin bosque natural,1254571
-NORTE DE SANTANDER,Superficie sin información,11804
-PUTUMAYO,Superficie con bosque natural,1782898
-PUTUMAYO,Superficie sin bosque natural,757615
-PUTUMAYO,Superficie sin información,50909
-QUINDIO,Superficie con bosque natural,50891
-QUINDIO,Superficie sin bosque natural,140153
-QUINDIO,Superficie sin información,2458
-RISARALDA,Superficie con bosque natural,134928
-RISARALDA,Superficie sin bosque natural,210191
-RISARALDA,Superficie sin información,8096
-SAN ANDRÉS Y PROVIDENCIA,Superficie con bosque natural,1019
-SAN ANDRÉS Y PROVIDENCIA,Superficie sin bosque natural,3976
-SAN ANDRÉS Y PROVIDENCIA,Superficie sin información,0
-SANTANDER,Superficie con bosque natural,837281
-SANTANDER,Superficie sin bosque natural,2210273
-SANTANDER,Superficie sin información,8216
-SUCRE,Superficie con bosque natural,27535
-SUCRE,Superficie sin bosque natural,1031503
-SUCRE,Superficie sin información,0
-TOLIMA,Superficie con bosque natural,418162
-TOLIMA,Superficie sin bosque natural,1912337
-TOLIMA,Superficie sin información,72731
-VALLE DEL CAUCA,Superficie con bosque natural,852146
-VALLE DEL CAUCA,Superficie sin bosque natural,1144484
-VALLE DEL CAUCA,Superficie sin información,97095
-VAUPES,Superficie con bosque natural,5161294
-VAUPES,Superficie sin bosque natural,187158
-VAUPES,Superficie sin información,39
-VICHADA,Superficie con bosque natural,4122417
-VICHADA,Superficie sin bosque natural,5883441
-VICHADA,Superficie sin información,9
+Departamento,Tipo,valor,Porcentaje
+AMAZONAS,Superficie con bosque natural,10622111,97.3000
+AMAZONAS,Superficie sin bosque natural,292431,2.6787
+AMAZONAS,Superficie sin información,2324,0.0213
+ANTIOQUIA,Superficie con bosque natural,2185080,34.6000
+ANTIOQUIA,Superficie sin bosque natural,3991202,63.1990
+ANTIOQUIA,Superficie sin información,138978,2.2007
+ARAUCA,Superficie con bosque natural,422270,17.7000
+ARAUCA,Superficie sin bosque natural,1952185,81.8278
+ARAUCA,Superficie sin información,11251,0.4716
+ATLANTICO,Superficie con bosque natural,4674,1.4000
+ATLANTICO,Superficie sin bosque natural,329183,98.5996
+ATLANTICO,Superficie sin información,0,0.0000
+BOGOTA DC,Superficie con bosque natural,9275,5.7000
+BOGOTA DC,Superficie sin bosque natural,151976,93.3946
+BOGOTA DC,Superficie sin información,1468,0.9021
+BOLIVAR,Superficie con bosque natural,647687,24.3000
+BOLIVAR,Superficie sin bosque natural,2015010,75.5987
+BOLIVAR,Superficie sin información,2682,0.1006
+BOYACA,Superficie con bosque natural,507507,19.0000
+BOYACA,Superficie sin bosque natural,2157270,80.7631
+BOYACA,Superficie sin información,6312,0.2363
+CALDAS,Superficie con bosque natural,146712,19.8000
+CALDAS,Superficie sin bosque natural,589133,79.5062
+CALDAS,Superficie sin información,5125,0.6916
+CAQUETA,Superficie con bosque natural,6518634,72.4000
+CAQUETA,Superficie sin bosque natural,2402438,26.6828
+CAQUETA,Superficie sin información,82566,0.9170
+CASANARE,Superficie con bosque natural,561770,12.6000
+CASANARE,Superficie sin bosque natural,3896336,87.3911
+CASANARE,Superficie sin información,386,0.0087
+CAUCA,Superficie con bosque natural,1418668,46.4000
+CAUCA,Superficie sin bosque natural,1523332,49.8225
+CAUCA,Superficie sin información,115474,3.7767
+CESAR,Superficie con bosque natural,196742,8.8000
+CESAR,Superficie sin bosque natural,2036167,91.0746
+CESAR,Superficie sin información,2796,0.1251
+CHOCO,Superficie con bosque natural,3748607,78.1000
+CHOCO,Superficie sin bosque natural,737859,15.3726
+CHOCO,Superficie sin información,313287,6.5270
+CORDOBA,Superficie con bosque natural,422845,16.9000
+CORDOBA,Superficie sin bosque natural,2054380,82.1076
+CORDOBA,Superficie sin información,24816,0.9918
+CUNDINAMARCA,Superficie con bosque natural,309644,13.8000
+CUNDINAMARCA,Superficie sin bosque natural,1872629,83.4575
+CUNDINAMARCA,Superficie sin información,61524,2.7419
+GUAINIA,Superficie con bosque natural,6631679,93.0000
+GUAINIA,Superficie sin bosque natural,499143,6.9997
+GUAINIA,Superficie sin información,16,0.0002
+GUAVIARE,Superficie con bosque natural,4813224,86.8000
+GUAVIARE,Superficie sin bosque natural,731965,13.1998
+GUAVIARE,Superficie sin información,0,0.0000
+HUILA,Superficie con bosque natural,466718,24.9000
+HUILA,Superficie sin bosque natural,1266855,67.5875
+HUILA,Superficie sin información,140796,7.5115
+LA GUAJIRA,Superficie con bosque natural,176649,8.6000
+LA GUAJIRA,Superficie sin bosque natural,1877386,91.3985
+LA GUAJIRA,Superficie sin información,23,0.0011
+MAGDALENA,Superficie con bosque natural,336483,14.5000
+MAGDALENA,Superficie sin bosque natural,1984086,85.4993
+MAGDALENA,Superficie sin información,3,0.0001
+META,Superficie con bosque natural,3077470,36.0000
+META,Superficie sin bosque natural,5374582,62.8712
+META,Superficie sin información,96476,1.1286
+NARIÑO,Superficie con bosque natural,1771894,56.5000
+NARIÑO,Superficie sin bosque natural,1168758,37.2672
+NARIÑO,Superficie sin información,195444,6.2320
+NORTE DE SANTANDER,Superficie con bosque natural,928382,42.3000
+NORTE DE SANTANDER,Superficie sin bosque natural,1254571,57.1611
+NORTE DE SANTANDER,Superficie sin información,11804,0.5378
+PUTUMAYO,Superficie con bosque natural,1782898,68.8000
+PUTUMAYO,Superficie sin bosque natural,757615,29.2347
+PUTUMAYO,Superficie sin información,50909,1.9645
+QUINDIO,Superficie con bosque natural,50891,26.3000
+QUINDIO,Superficie sin bosque natural,140153,72.4199
+QUINDIO,Superficie sin información,2458,1.2701
+RISARALDA,Superficie con bosque natural,134928,38.2000
+RISARALDA,Superficie sin bosque natural,210191,59.5015
+RISARALDA,Superficie sin información,8096,2.2918
+SAN ANDRÉS Y PROVIDENCIA,Superficie con bosque natural,1019,20.4000
+SAN ANDRÉS Y PROVIDENCIA,Superficie sin bosque natural,3976,79.2762
+SAN ANDRÉS Y PROVIDENCIA,Superficie sin información,0,0.0000
+SANTANDER,Superficie con bosque natural,837281,27.4000
+SANTANDER,Superficie sin bosque natural,2210273,72.3305
+SANTANDER,Superficie sin información,8216,0.2689
+SUCRE,Superficie con bosque natural,27535,2.6000
+SUCRE,Superficie sin bosque natural,1031503,97.3998
+SUCRE,Superficie sin información,0,0.0000
+TOLIMA,Superficie con bosque natural,418162,17.4000
+TOLIMA,Superficie sin bosque natural,1912337,79.5730
+TOLIMA,Superficie sin información,72731,3.0264
+VALLE DEL CAUCA,Superficie con bosque natural,852146,40.7000
+VALLE DEL CAUCA,Superficie sin bosque natural,1144484,54.6615
+VALLE DEL CAUCA,Superficie sin información,97095,4.6373
+VAUPES,Superficie con bosque natural,5161294,96.5000
+VAUPES,Superficie sin bosque natural,187158,3.4992
+VAUPES,Superficie sin información,39,0.0007
+VICHADA,Superficie con bosque natural,4122417,41.2000
+VICHADA,Superficie sin bosque natural,5883441,58.7997
+VICHADA,Superficie sin información,9,0.0001

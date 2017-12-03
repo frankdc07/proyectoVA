@@ -5,13 +5,16 @@ var marginP = {
 	bottom: 30,
 	left: 30
 },
-widthP = (1140 * 0.3) - marginP.left - marginP.right,
+widthP = (1140 * 0.50) - marginP.left - marginP.right,
 heightP = 350 - marginP.top - marginP.bottom;
 
 
 var svgP = d3version4.select(".piechart").append("svg")
 	.attr("width", widthP + marginP.left + marginP.right)
 	.attr("height", heightP + marginP.top + marginP.bottom);
+
+
+var formF = d3version4.format(".1f");
     
 function createPieChart(data) {   
 
@@ -29,12 +32,23 @@ var pie = d3version4.pie()
     .value(function(d) { return d.valor; });
 
 var path = d3version4.arc()
-    .outerRadius(radius - 10)
+    .outerRadius(radius - 20)
     .innerRadius(0);
 
 var label = d3version4.arc()
-    .outerRadius(radius - 200)
-    .innerRadius(radius);
+    .outerRadius(radius)
+    .innerRadius(0);
+    
+var labelDpto = svgP.selectAll(".labdepto") // note appending it to mySvg and not svg to make positioning easier
+    .data(pie(data))
+    .enter().append("g")
+    .attr("transform", function(d,i){
+        return "translate(" + (widthP * .08) + "," + (heightP) + ")"; // place each legend on the right and bump each one down 15 pixels
+    })
+    .attr("class", "labdepto");
+
+labelDpto.append("text")
+    .text(selectedDpto);
 
   var arc = g.selectAll(".arc")
     .data(pie(data))
@@ -48,5 +62,35 @@ var label = d3version4.arc()
   arc.append("text")
       .attr("transform", function(d) { return "translate(" + label.centroid(d) + ")"; })
       .attr("dy", "0.40em")
-      .text( function(d) { return d.data.Tipo;});
+      .text( function(d) { return formF(d.data.Porcentaje) + " %"});
+    
+    
+    // again rebind for legend
+    var legendG = svgP.selectAll(".legend") // note appending it to mySvg and not svg to make positioning easier
+      .data(pie(data))
+      .enter().append("g")
+      .attr("transform", function(d,i){
+        return "translate(" + (widthP - 135) + "," + (i * 15 + 20) + ")"; // place each legend on the right and bump each one down 15 pixels
+      })
+      .attr("class", "legend");   
+
+    legendG.append("rect") // make a matching color rect
+      .attr("width", 10)
+      .attr("height", 10)
+      .style("fill", function(d, i) {console.log(colorP(d.data.Tipo));
+        return colorP(d.data.Tipo);
+      });
+
+    legendG.append("text") // add the text
+      .text(function(d){
+        return d.data.Tipo;
+      })
+      .style("font-size", 12)
+      .attr("y", 10)
+      .attr("x", 11);
+    
+    
 }
+
+
+

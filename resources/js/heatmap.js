@@ -9,7 +9,7 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.*/
 
    
-      const marginHM = { top: 50, right: 0, bottom: 100, left: 150 },
+      const marginHM = { top: 50, right: 0, bottom: 100, left: 75 },
           widthHM = (1140 * 0.5) - marginHM.left - marginHM.right,
           gridSize = Math.floor(widthHM / 8),
           heigtR = gridSize/2,
@@ -85,8 +85,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                             .style("opacity", .6);
                   div.transition()		
                     .duration(200)		
-                    .style("opacity", .9);		
-                  div.html("<b>Hectáreas</b></br>" + formatComma(d.value))	
+                    .style("opacity", .9);	
+                    var icon ='"ion-leaf"'	
+                  div.html("<i class=" + icon + " ></i><b> Hectáreas</b></br>" + formatComma(d.value))	
                     .style("left", (d3version4.event.pageX + 15 ) + "px")		
                     .style("top", (d3version4.event.pageY - 45) + "px");
                     
