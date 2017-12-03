@@ -12,7 +12,7 @@ d3version4.csv("resources/data/superficie.csv", function(d) {
   return d;
 }, function(error, data) {
   if (error) throw error;
-    selectedDpto= "AMAZONAS";
+    selectedDpto= "CAQUETA";
     dataPie = data;
     var filteredData = data.filter(function(d) { return d.Departamento == selectedDpto; });     
     createPieChart(filteredData);

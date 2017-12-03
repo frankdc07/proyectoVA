@@ -136,7 +136,7 @@ function createStackedChart(data) {
             .select(this)
             .attr("stroke", "blue")
             .attr("stroke-width", 0.8)
-            .style("opacity", 0.7);
+            .style("opacity", 0.5);
         
         if (active_link === "0" || d.name === legendClicked){
           div.transition()		
