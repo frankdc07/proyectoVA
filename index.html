@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>            
+        <meta charset="utf-8">
+        
+        <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+        
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script>
+            var d3version3 = d3
+            window.d3 = null
+        </script>
+        
+        <script src="http://d3js.org/d3.v4.js"></script>
+        <script> 
+            var d3version4 = d3
+            window.d3 = null
+        </script>     
+    </head>
+    <body>         
+        <div class="row">
+            <div class="col span-1-of-2">
+                <div id="chart"></div>
+            </div>
+            <div class="col span-1-of-2">
+                <div class="piechart"></div>
+                <div class="stackedbch"></div>
+            </div>
+        </div>   
+        <div class="row">
+                <div class="selection"></div>
+        </div> 
+        <div class="row">
+        </div>
+        <footer>
+            <div class="row">
+                <span>FOOTER</span>
+            </div>
+        </footer>
+                
+        <script type="text/javascript" src="resources/js/piechart.js"></script>
+        <script type="text/javascript" src="resources/js/heatmap.js"></script>
+        <script type="text/javascript" src="resources/js/main.js"></script>
+        <script type="text/javascript" src="resources/js/stacked.js"></script>
+    </body>
+</html>
