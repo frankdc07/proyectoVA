@@ -230,3 +230,74 @@ text.axis-worktime {
     color: "#164f07";
     text-transform: capitalize;
 }
+
+
+
+/*-------------------------------------------------------*/
+/* Bubblechart */
+/*-------------------------------------------------------*/
+
+
+.municipioC {   
+    padding-top: 80px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/tree.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 400px;    
+    overflow: hidden;    
+}
+
+.mun-text-box {
+    position: absolute;
+    text-align: justify;
+    width: 800px;  
+}
+
+.mun-text-box p {
+    width: 500px;
+    color: aliceblue;
+    margin-bottom: 50px;  
+}
+
+.btn:link,
+.btn:visited{
+    display: inline-block;
+    position: absolute;
+    top: 90%;
+    left: 70%;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.3s, border 0.3s, color 0.3s;
+}
+
+.btn-full:link,
+.btn-full:visited {
+    background-color: #1b5f08;
+    border: 1px solid #1b5f08;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #0d3004;
+}
+
+
+/*-------------------------------------------------------*/
+/* Footer */
+/*-------------------------------------------------------*/
+
+
+.footer{
+    height: 200px;
+    background-color: #04220b;
+    overflow:auto ;    
+    
+}
+
+
+

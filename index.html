@@ -13,7 +13,7 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-        <script type="text/javascript" src="resources/js/smoothlink.js"></script>
+        <script type="text/javascript" src="resources/js/smoothlink.js"></script>        
         
         <script src="https://d3js.org/d3.v3.min.js"></script>
         <script>
@@ -33,7 +33,8 @@
                 <div class="row">
                     <img src="resources/img/logo.png" alt="Omnifood logo" class="logo">
                     <ul class="main-nav">
-                        <li><a href="#comenzar">Comenzar</a></li>
+                        <li><a href="#general">General</a></li>                        
+                        <li><a href="#municipio">Municipios</a></li>
                         <li><i class="ion-social-github github"></i><a href="https://github.com/frankdc07/proyectoVA">Github</a></li>
                     </ul>
                 </div>
@@ -42,7 +43,7 @@
                 <h1>Deforestación en Colombia <br>¿Como están nuestros bosques?</h1>
             </div>
         </header>  
-        <section id="comenzar" class="vis">
+        <section id="general" class="vis">
             <div class="row">
                 <div class="col span-1-of-2">
                     <h3>Niveles de deforestación 1990 - 2016</h3>
@@ -56,12 +57,25 @@
                 </div>
             </div>   
         </section>
-        <footer>
+        <section id="municipio" class="municipioC">
             <div class="row">
-                <span>FOOTER</span>
+                <div class="bubblechart">             
+                    <div class="mun-text-box">
+                        <h1>Análisis de la deforestacion<br> en los municipios </h1>
+                        <p class="mun-text">Esta sección muestra a través de una grafica de burbujas
+                            la distribución por municipios de la deforestación en Colombia.
+                            Por favor sigue el enlace para continuar:
+                        </p>
+                        <a class="btn btn-full" href="bubblechart.html"><i class="ion-leaf" style="margin-right: 6px"></i> Municipios</a>
+                    </div>                    
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer">   
             </div>
         </footer>
-                
+        
         <script type="text/javascript" src="resources/js/piechart.js"></script>
         <script type="text/javascript" src="resources/js/heatmap.js"></script>
         <script type="text/javascript" src="resources/js/main.js"></script>

@@ -80,9 +80,7 @@ function createStackedChart(data) {
 	.attr("transform", "rotate(-90)")
 	.attr("y", 6)
 	.attr("dy", ".71em")
-	.style("text-anchor", "end")
-    .selectAll("text")
-      .call(wrap, y.rangeBand());;
+	.style("text-anchor", "end");
 	//.text("Population");
 
 	var dpto = svgSB.selectAll(".dpto")
@@ -126,6 +124,7 @@ function createStackedChart(data) {
 
 	dpto.selectAll("rect")
 	.on("mouseover", function (d) {
+        if (active_link === "0" || d.name === legendClicked){
 
 		var delta = d.x1 - d.x0;
 		var xPos = parseFloat(d3version3.select(this).attr("x"));
@@ -138,8 +137,6 @@ function createStackedChart(data) {
             .attr("stroke", "blue")
             .attr("stroke-width", 0.8)
             .style("opacity", 0.5);
-        
-        if (active_link === "0" || d.name === legendClicked){
           div.transition()		
                 .duration(200)		
                 .style("opacity", .9);
@@ -178,15 +175,15 @@ function createStackedChart(data) {
 			return "legend";
 		})
 		.attr("transform", function (d, i) {
-			return "translate(0," + i * 20 + ")";
+			return "translate(0," + (i * width * 0.06) + ")";
 		});
     
     var yearLabel = svgSB.selectAll(".yearlabel")
-		.data(color.domain().slice().reverse())
+		.data([1])
         .enter().append("g")
 		.attr("class", "yearlabel")
-		.attr("transform", function (d, i) {console.log("hola");
-			return "translate(0," + i * 20 + ")";
+		.attr("transform", function (d, i) {
+			return "translate(0," + (i * width * 0.06) + ")";
 		});
     
     yearLabel.append("text")
@@ -200,10 +197,10 @@ function createStackedChart(data) {
 	legendClassArray = legendClassArray.reverse();
 
 	legend.append("rect")
-	.attr("x", width - 45)
-	.attr("y", 260)
-	.attr("width", 18)
-	.attr("height", 18)
+	.attr("x", width * .7)
+	.attr("y", height * .3)
+	.attr("width", width * .04)
+	.attr("height", width * .04)
 	.style("fill", color)
 	.attr("id", function (d, i) {
 		return "id" + d.replace(/\s/g, '');
@@ -262,8 +259,8 @@ function createStackedChart(data) {
 	});
 
 	legend.append("text")
-	.attr("x", width - 55)
-	.attr("y", 269 )
+	.attr("x", width *.9)
+	.attr("y", height * .31 )
 	.attr("dy", ".35em")
 	.style("text-anchor", "end")
 	.text(function (d) {

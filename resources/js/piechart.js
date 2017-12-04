@@ -69,14 +69,14 @@ labelDpto.append("text")
       .data(pie(data))
       .enter().append("g")
       .attr("transform", function(d,i){
-        return "translate(" + (widthP - 135) + "," + (i * 15 + 20) + ")"; // place each legend on the right and bump each one down 15 pixels
+        return "translate(" + (widthP * .75) + "," + (widthP * (i * 0.03 + 0.06)) + ")"; // place each legend on the right and bump each one down 15 pixels
       })
       .attr("class", "legend");   
 
     legendG.append("rect") // make a matching color rect
-      .attr("width", 10)
-      .attr("height", 10)
-      .style("fill", function(d, i) {console.log(colorP(d.data.Tipo));
+      .attr("width", widthP * 0.018)
+      .attr("height", widthP * 0.018)
+      .style("fill", function(d, i) {
         return colorP(d.data.Tipo);
       });
 
@@ -84,9 +84,9 @@ labelDpto.append("text")
       .text(function(d){
         return d.data.Tipo;
       })
-      .style("font-size", 12)
-      .attr("y", 10)
-      .attr("x", 11);
+      .style("font-size", "65%")
+      .attr("y", widthP * 0.018)
+      .attr("x", widthP * 0.025);
     
     
 }

@@ -13,7 +13,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
           widthHM = chart.offsetWidth - marginHM.left - marginHM.right,
           gridSize = Math.floor(widthHM / 8),
           heigtR = gridSize/2,
-          heightHM = (heigtR * 40)- marginHM.top - marginHM.bottom,
+          heightHM = (widthHM * 2.5)- marginHM.top - marginHM.bottom,
           legendElementWidth = gridSize - 14,
           colors = ["#84db1f", "#9ce548","#ace966","#efe776","#eae048", "#d5c919", "#f77418", "#e56308", "#e82d1c"], // alternatively colorbrewer.YlGnBu[9]
           dptos = ["AMAZONAS", "ANTIOQUIA", "ARAUCA", "ATLANTICO", "BOGOTA DC", "BOLIVAR", "BOYACA", "CALDAS", "CAQUETA", "CASANARE", "CAUCA", "CESAR", "CHOCO", "CORDOBA", "CUNDINAMARCA", "GUAINIA", "GUAVIARE", "HUILA", "LA GUAJIRA", "MAGDALENA", "META", "NARIÑO", "NORTE DE SANTANDER", "PUTUMAYO", "QUINDIO", "RISARALDA", "SAN ANDRÉS Y PROVIDENCIA", "SANTANDER", "SUCRE", "TOLIMA", "VALLE DEL CAUCA", "VAUPES", "VICHADA"],
