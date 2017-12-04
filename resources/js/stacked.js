@@ -5,8 +5,9 @@ var margin = {
 	bottom: 30,
 	left: 75
 },
-width = stacked.offsetWidth - margin.left - margin.right,
-height = (width * 1.68) - margin.top - margin.bottom;
+width = (1140 * 0.6) - margin.left - margin.right,
+height = 960 - margin.top - margin.bottom;
+
 var y = d3version3.scale.ordinal()
 	.rangeRoundBands([0, height], .1);
 
