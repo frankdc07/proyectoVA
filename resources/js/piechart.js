@@ -5,9 +5,8 @@ var marginP = {
 	bottom: 30,
 	left: 30
 },
-widthP = (1140 * 0.50) - marginP.left - marginP.right,
-heightP = 350 - marginP.top - marginP.bottom;
-
+widthP = pie.clientWidth - marginP.left - marginP.right,
+heightP = (widthP / 1.6) - marginP.top - marginP.bottom;
 
 var svgP = d3version4.select(".piechart").append("svg")
 	.attr("width", widthP + marginP.left + marginP.right)

@@ -10,15 +10,15 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
    
       const marginHM = { top: 50, right: 0, bottom: 100, left: 75 },
-          widthHM = (1140 * 0.5) - marginHM.left - marginHM.right,
+          widthHM = chart.offsetWidth - marginHM.left - marginHM.right,
           gridSize = Math.floor(widthHM / 8),
           heigtR = gridSize/2,
           heightHM = (heigtR * 40)- marginHM.top - marginHM.bottom,
           legendElementWidth = gridSize - 14,
           colors = ["#84db1f", "#9ce548","#ace966","#efe776","#eae048", "#d5c919", "#f77418", "#e56308", "#e82d1c"], // alternatively colorbrewer.YlGnBu[9]
-          days = ["AMAZONAS", "ANTIOQUIA", "ARAUCA", "ATLANTICO", "BOGOTA DC", "BOLIVAR", "BOYACA", "CALDAS", "CAQUETA", "CASANARE", "CAUCA", "CESAR", "CHOCO", "CORDOBA", "CUNDINAMARCA", "GUAINIA", "GUAVIARE", "HUILA", "LA GUAJIRA", "MAGDALENA", "META", "NARIÑO", "NORTE DE SANTANDER", "PUTUMAYO", "QUINDIO", "RISARALDA", "SAN ANDRÉS Y PROVIDENCIA", "SANTANDER", "SUCRE", "TOLIMA", "VALLE DEL CAUCA", "VAUPES", "VICHADA"],
+          dptos = ["AMAZONAS", "ANTIOQUIA", "ARAUCA", "ATLANTICO", "BOGOTA DC", "BOLIVAR", "BOYACA", "CALDAS", "CAQUETA", "CASANARE", "CAUCA", "CESAR", "CHOCO", "CORDOBA", "CUNDINAMARCA", "GUAINIA", "GUAVIARE", "HUILA", "LA GUAJIRA", "MAGDALENA", "META", "NARIÑO", "NORTE DE SANTANDER", "PUTUMAYO", "QUINDIO", "RISARALDA", "SAN ANDRÉS Y PROVIDENCIA", "SANTANDER", "SUCRE", "TOLIMA", "VALLE DEL CAUCA", "VAUPES", "VICHADA"],
           times = ["1990-2000", "2000-2005", "2005-2010", "2010-2012", "2013", "2014", "2015", "2016"];
-          datasets = ["resources/data/data.tsv", "resources/data/data2.tsv"];
+          datasets = ["resources/data/data.tsv"];
 
       const svgHM = d3version4.select("#chart").append("svg")
           .attr("width", widthHM + marginHM.left + marginHM.right)
@@ -26,15 +26,15 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
           .append("g")
           .attr("transform", "translate(" + marginHM.left + "," + marginHM.top + ")");
 
-      const dayLabels = svgHM.selectAll(".dayLabel")
-          .data(days)
+      const dptoLabels = svgHM.selectAll(".dptoLabel")
+          .data(dptos)
           .enter().append("text")
             .text(function (d) { return d; })
             .attr("x", 0)
             .attr("y", (d, i) => i * heigtR)
             .style("text-anchor", "end")
             .attr("transform", "translate(-6," + heigtR / 1.5 + ")")
-            .attr("class", (d, i) => ((i >= 0 && i <= 4) ? "dayLabel mono axis axis-workweek" : "dayLabel mono axis"));
+            .attr("class", (d, i) => ((i >= 0 && i <= 4) ? "dptoLabel mono axis axis-workweek" : "dptoLabel mono axis"));
 
       const timeLabels = svgHM.selectAll(".timeLabel")
           .data(times)
@@ -48,9 +48,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
       const type = (d) => {
         return {
-          day: +d.day,
-          hour: +d.hour,
-          value: +d.value
+          departamento: +d.departamento,
+          periodo: +d.periodo,
+          valor: +d.valor
         };
       };
 
@@ -58,11 +58,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         d3version4.tsv(tsvFile, type, (error, data) => {
             
           const colorScale = d3version4.scaleQuantile()
-            .domain([0, d3version4.max(data, (d) => d.value) / 2, d3version4.max(data, (d) => d.value)])
+            .domain([0, d3version4.max(data, (d) => d.valor) / 2, d3version4.max(data, (d) => d.valor)])
             .range(colors);
 
-          const cards = svgHM.selectAll(".hour")
-              .data(data, (d) => d.day+':'+d.hour);
+          const cards = svgHM.selectAll(".periodo")
+              .data(data, (d) => d.departamento+':'+d.periodo);
             
     var div = d3version4.select("body").append("div")	
         .attr("class", "tooltip")				
@@ -71,11 +71,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
           cards.append("title");
 
           cards.enter().append("rect")
-              .attr("x", (d) => (d.hour - 1) * gridSize)
-              .attr("y", (d) => (d.day - 1) * heigtR)
+              .attr("x", (d) => (d.periodo - 1) * gridSize)
+              .attr("y", (d) => (d.departamento - 1) * heigtR)
               .attr("rx", 4)
               .attr("ry", 4)
-              .attr("class", "hour bordered")
+              .attr("class", "periodo bordered")
               .attr("width", gridSize)
               .attr("height", heigtR)
               .style("fill", colors[2])
@@ -87,7 +87,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                     .duration(200)		
                     .style("opacity", .9);	
                     var icon ='"ion-leaf"'	
-                  div.html("<i class=" + icon + " ></i><b> Hectáreas</b></br>" + formatComma(d.value))	
+                  div.html("<i class=" + icon + " ></i><b> Hectáreas</b></br>" + formatComma(d.valor))	
                     .style("left", (d3version4.event.pageX + 15 ) + "px")		
                     .style("top", (d3version4.event.pageY - 45) + "px");
                     
@@ -100,20 +100,20 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                     .duration(500)		
                     .style("opacity", 0)})
                 .on("click", function (d) {
-                    selectedDpto=days[d.day-1];
+                    selectedDpto=dptos[d.departamento-1];
                     var filteredData = dataPie.filter(function(d) { return d.Departamento == selectedDpto; }); 
                     createPieChart(filteredData);
               
-                    selectValue = times[d.hour-1];                    
+                    selectValue = times[d.periodo-1];                    
                     var filteredData = dataSB.filter(function(d) { return d.Año == selectValue; }); 
                     createStackedChart(filteredData);                    
                     })
             .merge(cards)
               .transition()
               .duration(1000)
-              .style("fill", (d) => colorScale(d.value));
+              .style("fill", (d) => colorScale(d.valor));
             
-          cards.select("title").text((d) => d.value);
+          cards.select("title").text((d) => d.valor);
 
           cards.exit().remove();
 
@@ -142,13 +142,3 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
       heatmapChart(datasets[0]);
 
-      const datasetpicker = d3version4.select("#dataset-picker")
-        .selectAll(".dataset-button")
-        .data(datasets);
-
-      datasetpicker.enter()
-        .append("input")
-        .attr("value", (d) => "Dataset " + d)
-        .attr("type", "button")
-        .attr("class", "dataset-button")
-        .on("click", (d) => heatmapChart(d));
