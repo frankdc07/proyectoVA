@@ -1,0 +1,83 @@
+[  
+  {  
+    "key":"Hectáreas Coca",
+    "values":[  
+      {  
+        "reason":"2010",
+        "device":"Hectáreas Coca",
+        "value":61811
+        
+      },
+      {  
+        "reason":"2011",
+        "device":"Hectáreas Coca",
+        "value":63765
+      },
+      {  
+        "reason":"2012",
+        "device":"Hectáreas Coca",
+        "value":47788
+      },
+      {  
+        "reason":"2013",
+        "device":"Hectáreas Coca",
+        "value":48189
+      },
+      {  
+        "reason":"2014",
+        "device":"Hectáreas Coca",
+        "value":69132
+      },
+      {  
+        "reason":"2015",
+        "device":"Hectáreas Coca",
+        "value":96084
+      },
+      {  
+        "reason":"2016",
+        "device":"Hectáreas Coca",
+        "value":146140
+      }
+    ]
+  },
+  {  
+    "key":"Hectáreas Deforestación",
+    "values":[  
+      {  
+        "reason":"2010",
+        "device":"Hectáreas Deforestación",
+        "value":166073
+      },
+      {  
+        "reason":"2011",
+        "device":"Hectáreas Deforestación",
+        "value":166073
+      },
+      {  
+        "reason":"2012",
+        "device":"Hectáreas Deforestación",
+        "value":166073
+      },
+      {  
+        "reason":"2013",
+        "device":"Hectáreas Deforestación",
+        "value":120939
+      },
+      {  
+        "reason":"2014",
+        "device":"Hectáreas Deforestación",
+        "value":140353
+      },
+      {  
+        "reason":"2015",
+        "device":"Hectáreas Deforestación",
+        "value":124034
+      },
+      {  
+        "reason":"2016",
+        "device":"Hectáreas Deforestación",
+        "value":178595
+      }
+    ]
+  }
+]

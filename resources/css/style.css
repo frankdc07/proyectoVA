@@ -74,7 +74,7 @@ header {
 
 .logo {
     height: 80px;
-    width: 300px;
+    width: 250px;
     float: left;
     margin-top: 20px;
 }
@@ -117,8 +117,8 @@ header {
 /* sections */
 /* --------------------------------------------------*/
 
-.vis {
-    padding-top: 40px;
+section {
+    padding-top: 60px;
 }
 
 
@@ -166,7 +166,7 @@ div.tooltip {
 }
 
 .stackedbch{
-    font-size: 55%;
+    font-size: 50%;
 }
 
 .yearlabel {
@@ -180,6 +180,19 @@ div.tooltip {
 /*-------------------------------------------------------*/
 /* Heatmap*/
 /*-------------------------------------------------------*/
+
+.pres {
+    text-align: center;
+}
+
+.textoini {
+    text-align: justify;
+    font-size: 75%;
+    line-height: 145%;
+    width: 70%;
+    margin-bottom: 40px;
+    word-spacing: 2px;
+}
 
 rect.bordered {
     stroke: #E6E6E6;
@@ -285,6 +298,28 @@ text.axis-worktime {
 .btn:active {
     background-color: #0d3004;
 }
+
+
+/*-------------------------------------------------------*/
+/* radar */
+/*-------------------------------------------------------*/
+
+.ilicitos {
+    background-color: #e8e8e8;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.ilicitos h1 {
+    font-size: 100%;
+    color: #000;
+}
+
+.ilicitos h2 {
+    font-size: 200%;
+    text-decoration-style: solid;
+}
+
 
 
 /*-------------------------------------------------------*/
