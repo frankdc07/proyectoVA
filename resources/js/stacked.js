@@ -1,9 +1,9 @@
 
 var margin = {
-	top: 20,
-	right: 20,
-	bottom: 30,
-	left: 75
+	top: stacked.offsetWidth * .06,
+	right: stacked.offsetWidth * .06,
+	bottom: stacked.offsetWidth * .08,
+	left: stacked.offsetWidth * .14
 },
 width = stacked.offsetWidth - margin.left - margin.right,
 height = (width * 1.68) - margin.top - margin.bottom;

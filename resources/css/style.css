@@ -70,10 +70,11 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    margin 0 2%;
 }
 
 .logo {
-    height: 80px;
+    height: 95px;
     width: 250px;
     float: left;
     margin-top: 20px;
@@ -118,7 +119,8 @@ header {
 /* --------------------------------------------------*/
 
 section {
-    padding-top: 60px;
+    padding-top: 50px;
+    background-color: #e8e8e8;
 }
 
 
@@ -139,7 +141,9 @@ div.tooltip {
     border-radius: 8px;			
     pointer-events: none;	
     padding-top: 10px;
-    text-decoration-color: "#921213"
+    text-decoration-color: "#921213";
+    top: 0;
+    left: 0;
 }
 
 .tooltip {
@@ -264,18 +268,19 @@ text.axis-worktime {
 .mun-text-box {
     position: absolute;
     text-align: justify;
-    width: 800px;  
+    width: 1140px;  
+    padding: 0 4px;
 }
 
 .mun-text-box p {
-    width: 500px;
+    width: 65%;
     color: aliceblue;
     margin-bottom: 50px;  
 }
 
 .btn:link,
 .btn:visited{
-    display: inline-block;
+    display: block;
     position: absolute;
     top: 90%;
     left: 70%;
@@ -299,6 +304,25 @@ text.axis-worktime {
     background-color: #0d3004;
 }
 
+.bubble {
+    background-color: #638cb1;
+}
+
+.bubble-text {
+    padding-top: 95px;
+}
+
+.bubble h1 {
+    margin-bottom: 40px;
+    font-size: 200%;
+    color: #116416;
+}
+
+.bubble-text p {
+    text-align: justify;
+    line-height: 120%;
+    width: 80%;
+}
 
 /*-------------------------------------------------------*/
 /* radar */
@@ -327,12 +351,48 @@ text.axis-worktime {
 /*-------------------------------------------------------*/
 
 
-.footer{
-    height: 200px;
-    background-color: #04220b;
-    overflow:auto ;    
-    
+footer{
+    text-align: center;
+    color: #8b9298;
+    padding-top: 50px;
+    height: 230px;
+    background-color: #0d3004;    
+}/*04220b*/
+
+.datos {
+    font-size: 70%;
+    text-align: center;
+    line-height: 135%;
 }
 
+.contact {
+    margin-right: 5px;
+}
+
+.twiter:link,
+.twiter:visited {
+    text-decoration: none;
+    color: #8b9298;
+    transition: color 0.3s;
+}
+
+.twiter:hover,
+.twiter:active {
+    color: #c4c9ce;
+}
+
+
+.name {
+    font-weight: 600;
+}
+
+.autor {
+    margin-top: 15px;
+}
+
+.autores {
+    margin-bottom: 25px;
+    font-size: 80%;
+}
 
 

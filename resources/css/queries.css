@@ -2,10 +2,13 @@
 
 @media only screen and (max-width: 1200px){
     
-    .hero-text-box {
+    .hero-text-box,
+    .mun-text-box {
         width: 100%;
         padding: 0 2%;
     }
+    
+    
     
     .row { padding: 0 2%; }
 }
@@ -14,7 +17,19 @@
 @media only screen and (max-width: 1023px){
     
     body { font-size: 16px; }
+    
     section { padding: 60px 0;}
+    
+    .logo {
+        height: 75px;
+        width: 230px;
+        margin-top: 15px;
+    }
+    
+    .main-nav li a:link,
+    .main-nav li a:visited {
+        padding: 6px 0;
+    }
     
 }
 
@@ -22,14 +37,37 @@
 
 @media only screen and (max-width: 767px){
     
-    body { font-size: 14px; }
+    body { font-size: 13px; }
+    
     section { padding: 40px 0;}
+    
+    .logo {
+        height: 65px;
+        width: 210px;
+        margin-top: 10px;
+    }
+    
+    .main-nav li a:link,
+    .main-nav li a:visited {
+        padding: 4px 0;
+    }
     
 }
 
 @media only screen and (max-width: 480px){
     
     body { font-size: 10px; }
+    
     section { padding: 20px 0;}
     
+    .logo {
+        height: 55px;
+        width: 190px;
+        margin-top: 5px;
+    }
+    
+    .main-nav li a:link,
+    .main-nav li a:visited {
+        padding: 2px 0;
+    }
 }

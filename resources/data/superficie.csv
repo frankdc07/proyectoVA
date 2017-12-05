@@ -41,9 +41,9 @@ CHOCO,Superficie sin información,313287,6.5270
 CORDOBA,Superficie con bosque natural,422845,16.9000
 CORDOBA,Superficie sin bosque natural,2054380,82.1076
 CORDOBA,Superficie sin información,24816,0.9918
-CUNDINAMARCA,Superficie con bosque natural,309644,13.8000
-CUNDINAMARCA,Superficie sin bosque natural,1872629,83.4575
-CUNDINAMARCA,Superficie sin información,61524,2.7419
+C/MARCA,Superficie con bosque natural,309644,13.8000
+C/MARCA,Superficie sin bosque natural,1872629,83.4575
+C/MARCA,Superficie sin información,61524,2.7419
 GUAINIA,Superficie con bosque natural,6631679,93.0000
 GUAINIA,Superficie sin bosque natural,499143,6.9997
 GUAINIA,Superficie sin información,16,0.0002
@@ -65,9 +65,9 @@ META,Superficie sin información,96476,1.1286
 NARIÑO,Superficie con bosque natural,1771894,56.5000
 NARIÑO,Superficie sin bosque natural,1168758,37.2672
 NARIÑO,Superficie sin información,195444,6.2320
-NORTE DE SANTANDER,Superficie con bosque natural,928382,42.3000
-NORTE DE SANTANDER,Superficie sin bosque natural,1254571,57.1611
-NORTE DE SANTANDER,Superficie sin información,11804,0.5378
+N. SANTANDER,Superficie con bosque natural,928382,42.3000
+N. SANTANDER,Superficie sin bosque natural,1254571,57.1611
+N. SANTANDER,Superficie sin información,11804,0.5378
 PUTUMAYO,Superficie con bosque natural,1782898,68.8000
 PUTUMAYO,Superficie sin bosque natural,757615,29.2347
 PUTUMAYO,Superficie sin información,50909,1.9645
@@ -77,9 +77,9 @@ QUINDIO,Superficie sin información,2458,1.2701
 RISARALDA,Superficie con bosque natural,134928,38.2000
 RISARALDA,Superficie sin bosque natural,210191,59.5015
 RISARALDA,Superficie sin información,8096,2.2918
-SAN ANDRÉS Y PROVIDENCIA,Superficie con bosque natural,1019,20.4000
-SAN ANDRÉS Y PROVIDENCIA,Superficie sin bosque natural,3976,79.2762
-SAN ANDRÉS Y PROVIDENCIA,Superficie sin información,0,0.0000
+SAN ANDRÉS,Superficie con bosque natural,1019,20.4000
+SAN ANDRÉS,Superficie sin bosque natural,3976,79.2762
+SAN ANDRÉS,Superficie sin información,0,0.0000
 SANTANDER,Superficie con bosque natural,837281,27.4000
 SANTANDER,Superficie sin bosque natural,2210273,72.3305
 SANTANDER,Superficie sin información,8216,0.2689
@@ -89,9 +89,9 @@ SUCRE,Superficie sin información,0,0.0000
 TOLIMA,Superficie con bosque natural,418162,17.4000
 TOLIMA,Superficie sin bosque natural,1912337,79.5730
 TOLIMA,Superficie sin información,72731,3.0264
-VALLE DEL CAUCA,Superficie con bosque natural,852146,40.7000
-VALLE DEL CAUCA,Superficie sin bosque natural,1144484,54.6615
-VALLE DEL CAUCA,Superficie sin información,97095,4.6373
+VALLE,Superficie con bosque natural,852146,40.7000
+VALLE,Superficie sin bosque natural,1144484,54.6615
+VALLE,Superficie sin información,97095,4.6373
 VAUPES,Superficie con bosque natural,5161294,96.5000
 VAUPES,Superficie sin bosque natural,187158,3.4992
 VAUPES,Superficie sin información,39,0.0007

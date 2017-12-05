@@ -1,12 +1,12 @@
 
 var marginP = {
-	top: 20,
-	right: 20,
-	bottom: 30,
-	left: 30
+	top: pie.offsetWidth * .06,
+	right: pie.offsetWidth * .06,
+	bottom: pie.offsetWidth * .03,
+	left: pie.offsetWidth * .08
 },
-widthP = pie.clientWidth - marginP.left - marginP.right,
-heightP = (widthP / 1.6) - marginP.top - marginP.bottom;
+widthP = pie.offsetWidth - marginP.left - marginP.right,
+heightP = (widthP / 1.4) - marginP.top - marginP.bottom;
 
 var svgP = d3version4.select(".piechart").append("svg")
 	.attr("width", widthP + marginP.left + marginP.right)

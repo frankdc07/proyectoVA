@@ -1,10 +1,6 @@
 body {
   font: 300 36px "Helvetica Neue";
-  height: 640px;
-  margin: 80px 160px 80px 160px;
   overflow: hidden;
-  position: relative;
-  width: 960px;
 }
 
 a:link, a:visited {
@@ -93,10 +89,37 @@ h3 {
   color: #1181B8;
 }
 
-body > svg {
-  position: absolute;
-  top: -80px;
-  left: -160px;
+
+text {
+  font-size: 11px;
+    fill: #777;
+  pointer-events: none;
+}
+
+text.parent {
+  fill: #116416;
+  font-weight: bold;
+}
+
+circle {
+  fill: #edfc62;
+  stroke: #999;
+  pointer-events: all;
+}
+
+circle.parent {
+  fill: #116416;
+  fill-opacity: .3;
+  stroke: #116416;
+}
+
+circle.parent:hover {
+  stroke: #fff;
+  stroke-width: .5px;
+}
+
+circle.child {
+  pointer-events: none;
 }
 
 
@@ -105,12 +128,11 @@ body > svg {
 /*-------------------------------------------------------*/
 
 
-.btn:link,
-.btn:visited{
+.bubble .btn:link,
+.bubble .btn:visited{
     display: inline-block;
-    position: absolute;
-    top: 90%;
-    left: 70%;
+    top: 80%;
+    left: 71%;
     padding: 10px 30px;
     font-weight: 300;
     text-decoration: none;
@@ -118,15 +140,8 @@ body > svg {
     transition: background-color 0.3s, border 0.3s, color 0.3s;
 }
 
-.btn-full:link,
-.btn-full:visited {
-    background-color: #1b5f08;
-    border: 1px solid #1b5f08;
-    color: #fff;
-    margin-right: 15px;
-}
-
 .btn:hover,
 .btn:active {
     background-color: #0d3004;
+    color: #edfc62;
 }

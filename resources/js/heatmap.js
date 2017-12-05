@@ -9,17 +9,17 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.*/
 
    
-      const marginHM = { top: 50, right: 0, bottom: 100, left: 75 },
+      const marginHM = { top: chart.offsetWidth * .1, right: 0, bottom: chart.offsetWidth * .2, left: chart.offsetWidth * .15 },
           widthHM = chart.offsetWidth - marginHM.left - marginHM.right,
           gridSize = Math.floor(widthHM / 8),
           heigtR = gridSize/2,
           heightHM = (widthHM * 2.5)- marginHM.top - marginHM.bottom,
           legendElementWidth = gridSize - 14,
-          colors = ["#84db1f", "#9ce548","#ace966","#efe776","#eae048", "#d5c919", "#f77418", "#e56308", "#e82d1c"], // alternatively colorbrewer.YlGnBu[9]
-          dptos = ["AMAZONAS", "ANTIOQUIA", "ARAUCA", "ATLANTICO", "BOGOTA DC", "BOLIVAR", "BOYACA", "CALDAS", "CAQUETA", "CASANARE", "CAUCA", "CESAR", "CHOCO", "CORDOBA", "CUNDINAMARCA", "GUAINIA", "GUAVIARE", "HUILA", "LA GUAJIRA", "MAGDALENA", "META", "NARIÑO", "NORTE DE SANTANDER", "PUTUMAYO", "QUINDIO", "RISARALDA", "SAN ANDRÉS Y PROVIDENCIA", "SANTANDER", "SUCRE", "TOLIMA", "VALLE DEL CAUCA", "VAUPES", "VICHADA"],
+          colors = ["#ace966","#efe776","#eae048", "#FFEA16", "#d5c919", "#f77418", "#e56308", "#e82d1c"], // alternatively colorbrewer.YlGnBu[9]
+          dptos = ["AMAZONAS", "ANTIOQUIA", "ARAUCA", "ATLANTICO", "BOGOTA DC", "BOLIVAR", "BOYACA", "CALDAS", "CAQUETA", "CASANARE", "CAUCA", "CESAR", "CHOCO", "CORDOBA", "C/MARCA", "GUAINIA", "GUAVIARE", "HUILA", "LA GUAJIRA", "MAGDALENA", "META", "NARIÑO", "N. SANTANDER", "PUTUMAYO", "QUINDIO", "RISARALDA", "SAN ANDRÉS", "SANTANDER", "SUCRE", "TOLIMA", "VALLE", "VAUPES", "VICHADA"],
           times = ["1990-2000", "2000-2005", "2005-2010", "2010-2012", "2013", "2014", "2015", "2016"];
           datasets = ["resources/data/data.tsv"];
-
+chart.offsetWidth * .15
       const svgHM = d3version4.select("#chart").append("svg")
           .attr("width", widthHM + marginHM.left + marginHM.right)
           .attr("height", heightHM + marginHM.top + marginHM.bottom)

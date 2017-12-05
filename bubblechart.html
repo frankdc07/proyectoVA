@@ -2,56 +2,42 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+      
     <link type="text/css" rel="stylesheet" href="resources/css/styleB.css"/>
-    <!--<link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">-->
-    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
-    <style type="text/css">
-
-text {
-  font-size: 11px;
-  pointer-events: none;
-}
-
-text.parent {
-  fill: #1f77b4;
-  font-weight: bold;
-}
-
-circle {
-  fill: #edfc62;
-  stroke: #999;
-  pointer-events: all;
-}
-
-circle.parent {
-  fill: #1f77b4;
-  fill-opacity: .1;
-  stroke: steelblue;
-}
-
-circle.parent:hover {
-  stroke: #ff7f0e;
-  stroke-width: .5px;
-}
-
-circle.child {
-  pointer-events: none;
-}
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css">      
   </head>
   <body>
       
             
     <script src="https://d3js.org/d3.v3.min.js"></script>
-      <div class="bubble"></div>
-      
+      <div class="bubble">
+          <div class="col span-3-of-5">
+            <div id="chart"></div>
+          </div>
+          <div class="col span-2-of-5">
+              <div class="bubble-text">
+                <h1>En los municipios...</h1>
+                  <p>
+                    Minería ilegal presentan especial atención los departamentos de Chocó, Antioquia donde el gobierno emprenderá un plan de 
+acción inmediato involucrando a las autoridades ambientales,En Antioquia, los municipios, Yondo,Caceres,Anorí, Taraza 
+y El Bagre, fueron las zonas de mayor afectación con una pérdida de bosque entre el 45 y el 75%.<br><br>
+
+Según el Ministro de Ambiente, Gabriel Vallejo López, "gracias a que hoy contamos con información más precisa y 
+anual podemos identificar y tomar acciones más rápido contra las actividades que afectan la conservación de los 
+bosques, como la tala y la minería ilegal, la conversión a cultivos agrícolas o los incendios forestales provocados".
+                  </p>
+                  <a class="btn btn-full" href="index.html#municipio"><i class="ion-leaf" style="margin-right: 6px"></i> Volver</a>
+              </div>
+          </div>
+      </div>
     <script type="text/javascript">
         
 
-var w = 1280,
-    h = 750,
+var w = chart.offsetWidth,
+    h = w * .8,
     r = 720,
     x = d3.scale.linear().range([0, r]),
     y = d3.scale.linear().range([0, r]),
@@ -62,7 +48,7 @@ var pack = d3.layout.pack()
     .size([r, r])
     .value(function(d) { return d.size; })
 
-var vis = d3.select("body").insert("svg:svg", "h2")
+var vis = d3.select("#chart").insert("svg:svg", "h2")
     .attr("width", w)
     .attr("height", h)
   .append("svg:g")
@@ -86,7 +72,11 @@ d3.json("resources/data/municipios.json", function(data) {
       .attr("cx", function(d) { return d.x; })
       .attr("cy", function(d) { return d.y; })
       .attr("r", function(d) { return d.r; })
-      .on("click", function(d) { return zoom(node == d ? root : d); });
+      .style("opacity", 0)
+      .on("click", function(d) { return zoom(node == d ? root : d); })      
+      .transition()
+        .duration(1000)
+        .style("opacity", 1);
 
   vis.selectAll("text")
       .data(nodes)
